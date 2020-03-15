@@ -16,7 +16,6 @@ if ( $wpb_all_query->have_posts() ) : ?>
         <!-- the loop -->
         <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
         <?php
-
 //        echo "the ID" .get_the_ID();
 //        echo "the url". get_the_post_thumbnail_url(get_the_ID(),'full')
         ?>
