@@ -3,12 +3,13 @@
 $case_number=block_field( 'case_number',false );
 $order_date="ASC";
 
+
 if(block_field( 'order_date',false )=="DESC"){
     $order_date="DESC";
 }
 //echo "the order_date" .$order_date . "string length ". strlen($order_date);
 // the query
-$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>$case_number,"order" => $order_date));
+$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>$case_number,"order" => $order_date,"category_name" => 'casestudy'));
 
 
 if ( $wpb_all_query->have_posts() ) : ?>
@@ -16,6 +17,7 @@ if ( $wpb_all_query->have_posts() ) : ?>
         <!-- the loop -->
         <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
         <?php
+
 //        echo "the ID" .get_the_ID();
 //        echo "the url". get_the_post_thumbnail_url(get_the_ID(),'full')
         ?>

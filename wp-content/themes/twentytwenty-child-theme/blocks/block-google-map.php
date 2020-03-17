@@ -21,7 +21,7 @@
         setTimeout(function(){
 
             load_map();
-        }, 5000);
+        }, 1000);
 
     });
 /**END cbs js **/
