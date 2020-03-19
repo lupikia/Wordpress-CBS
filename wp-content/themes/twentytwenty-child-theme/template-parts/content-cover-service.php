@@ -6,6 +6,8 @@
  * @subpackage Twenty_Twenty
  * @since 1.0.0
  */
+
+global $settings;
 ?>
 
 <article class="service" id="post-<?php the_ID(); ?>">
@@ -46,54 +48,94 @@
 	<div class="cover-header <?php echo $cover_header_classes; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
 		<div class="cover-header-inner-wrapper screen-height">
 			<div class="slide-cover" <?php echo $cover_header_style; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) ?>>
+
+
+				<?php
+				if ( has_excerpt() && $settings["support-box"] ) {
+				?>
+
+				<div class="introduction-block">
+					<div class="intro-title">
+						<h1> <?php the_title(); ?> </h1>
+					</div>
+					<div class="intro-body">
+						<?php  the_excerpt(); ?>
+					</div>
+				</div>
+
+				<?php
+				}?>
+
 			</div>
-			<div class="cover-header-inner">
-				<div class="cover-color-overlay color-accent<?php echo esc_attr( $color_overlay_classes ); ?>"<?php echo $color_overlay_style; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) ?>></div>
-
-					<header class="entry-header has-text-align-center">
-						<div class="entry-header-inner section-inner medium">
-
-							<?php
-
-
-							//the_title( '<h1 class="entry-title">', '</h1>' );
-
-
-								if ( has_excerpt() ) {
-									?>
-
-									<div class="intro-text section-inner max-percentage">
-										<?php // the_excerpt(); ?>
-									</div>
-
-									<?php
-								}
-
-								twentytwenty_the_post_meta( get_the_ID(), 'single-top' );
-							?>
-
-						</div><!-- .entry-header-inner -->
-					</header><!-- .entry-header -->
-
-			</div><!-- .cover-header-inner -->
 		</div><!-- .cover-header-inner-wrapper -->
 	</div><!-- .cover-header -->
-
 	<div class="post-inner" id="post-inner">
-
 		<div class="entry-content">
+			<?php
+			if($settings["content-title"])
+			{?>
+					<h1> <?php the_title(); ?> </h1>
 
-		<?php
+			<?php }
+
+			if($settings["type"]=="news"){
+			?>
+
+				<div class="content-service">
+					<div class="content-service-block main-content">
+
+						<h1>  <?php echo get_the_title(); ?></h1>
+						<?php
+
+							the_post();
+							the_content();
+						?>
+					</div>
+					<div class="content-service-block sidebar-posts">
+						<h3>  <?php echo  block_field( 'post_title',false ); ?></h3>
+						<?php
+
+						$limit=block_field( 'number',false );
+						$category=block_field( 'category',false );
+						$order_date="ASC";
+
+						if(block_field( 'order_date',false )=="DESC"){
+						$order_date="DESC";
+						}
+						//echo "the order_date" .$order_date . "string length ". strlen($order_date);
+						// the query
+						$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>$limit,"order" => $order_date,"category_name" => $category));
 
 
-		 the_content();
+				if ( $wpb_all_query->have_posts() ) { ?>
+
+					<ul>
+						<!-- the loop -->
+						<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+
+							<li class="post-vertical-item">
+
+									<a  href="<?php echo get_permalink() ?>" class="case-title"><?php the_title();  ?></a>
+							</li>
+						<?php endwhile; ?>
+					</ul>
+
+				<?php }?>
+
+			<?php
+			}else{
+
+
+				if(have_posts()){
+					while ( have_posts() ) {
+						the_post();
+						the_content();
+					}
+				}
+
+			}
+
 		?>
-
 		</div><!-- .entry-content -->
-
-
 	</div><!-- .post-inner -->
-
-
-
 </article><!-- .post -->

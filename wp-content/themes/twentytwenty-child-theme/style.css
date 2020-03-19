@@ -260,18 +260,26 @@ Inter variable font. Usage:
 
 @font-face {
 	font-family: "cbs-font";
-	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
 	font-style: normal;
 	font-display: swap;
 	src: url(./assets/fonts/MyriadPro-Regular.otf);
 }
+@font-face {
+	font-family: "cbs-font-titles";
+	font-style: normal;
+	font-display: swap;
+	src: url(./assets/fonts/SourceCodePro-Bold.ttf);
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: "cbs-font-titles";
+}
 
 @font-face {
 	font-family: "cbs-font";
-	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
 	font-style: italic;
 	font-display: swap;
-	src: url(./assets/fonts/inter/Inter-italic-var.woff2) format("woff2");
+	src: url(./assets/fonts/MyriadPro-Regular.otf) format("woff2");
 }
 
 
@@ -418,6 +426,10 @@ hr {
 
 
 /**START Cbs STYLES**/
+
+.header-inner{
+	justify-content: center;
+}
 .slide-cover{
 	position: absolute;
 	width: 100%;
@@ -431,7 +443,7 @@ hr {
 	width: 100%;
 }
 .industries-content,.case-study,.partners,.news-content {
-	padding: 9rem 0;
+	padding: 5rem 0 10rem;
 }
 .industries-content ul{
 	list-style: none;
@@ -439,22 +451,21 @@ hr {
 	font-size: 15px !important;
 	line-height: 1.5 !important;
 }
+.partner-images {
+	padding: 0 6rem;
+}
 .partner-images .blocks-gallery-item{
 
-	margin-right: 35px !important;
+	margin-right: 10px !important;
 }
-.partner-images .blocks-gallery-item> figure{
+.partner-images  {
 	margin: auto 0px;
+	justify-content: center;
 }
-.partner-images .blocks-gallery-grid{
-
-	margin: auto;
-	flex-wrap: nowrap;
-}
-#home p{
+#about-us p{
 	line-height: 1.5;
 }
-#home{
+#about-us{
 	padding: 9rem 0;
 }
 .block-content-50{
@@ -464,6 +475,11 @@ hr {
 
 	width: 102rem;
 }
+.block-content-70{
+
+	width: 102rem;
+}
+
 .block-full-width{
 	max-width:100% !important;
 	width: calc(100% - 0rem) !important;
@@ -479,6 +495,13 @@ hr {
 	max-width: 1400px !important;
 	margin: auto;
 }
+.section-page-title{
+	margin-bottom: 3rem !important;
+	font-family: "cbs-font" !important;
+}
+.industries-content li{
+	margin-top: 2rem !important;
+}
 .card {
 	display: inline-block;
 	text-align: center;
@@ -487,7 +510,7 @@ hr {
 	margin-right: 5rem !important;
 	height: 375px;
 	position: relative;
-	margin-bottom: 10rem !important;
+	margin-bottom: 5rem !important;
 }
 
 .card-image{
@@ -513,7 +536,8 @@ hr {
 .card h6{
 	margin: 4px auto !important;
 	max-width: 35rem !important;
-
+	font-family: "cbs-font";
+	font-weight: 900;
 }
 .card .card-paragraph{
 	font-size: 15px;
@@ -527,10 +551,14 @@ hr {
 	width: 45rem;
 	margin: auto;
 }
+.contact-social ul {
+	width: 40rem;
+	margin: auto;
+}
 .contact-social li{
 	display: inline-block;
 	width: 9rem;
-	text-align: left;
+	text-align: center;
 }
 .contact-details li .icon-size-l {
 	margin-right: 15px;
@@ -545,12 +573,21 @@ hr {
 	text-decoration: none;
 }
 
+.contact-details  {
+	margin: 0px;
+}
 .contact-details li {
 	font-size: 15px;
 	line-height: 25px;
 	list-style: none;
 	text-align: left;
 
+}
+#contact-us .footer-widgets.column-two .widget_text{
+	margin-left: 7rem;
+}
+#contact-us .footer-inner{
+	max-width: 100%;
 }
 .icon-phone::before{
 	padding-right: 1rem;
@@ -597,6 +634,10 @@ hr {
 #contact-us-map {
 	height: 500px;
 	max-width: 100% !important;
+}
+
+#contact-us .footer-inner .widget-title{
+	text-align: left;
 }
 
 .case-item{
@@ -671,7 +712,7 @@ hr {
 }
 
 .entry-header-inner>.entry-title{
-	font-size: 6.5rem !important;
+	font-size: 5.5rem !important;
 	line-height: 4 !important;
 }
 
@@ -682,21 +723,16 @@ hr {
 	font-size: 14px;
 	margin: 0px 15px 0 !important;
 }
-[class^="outer_wrap-"]{
-
-	max-width: 100rem !important;
-	width: 100rem !important;
-	height: 480px !important;
-}
+[class^="outer_wrap-"]{max-width: 100rem !important;width: 100rem !important;height: 380px !important;}
 [class^="aps-next-"]{
 	right: -6.8%!important;
 }
 [class^="aps-prev-"]{
 	left: -6.8%!important;
- }
+}
 [class^="aps-next-"],[class^="aps-prev-"]{
 
-background: transparent!important;
+	background: transparent!important;
 	color:#333333!important;
 
 }
@@ -712,7 +748,10 @@ h2.aps-post-title a{
 }
 
 .service .screen-height {
-	min-height: 122vh !important;
+	min-height: 63vh !important;
+}
+.service .cover-header + .post-inner{
+	padding:0px ;
 }
 .service .slide-cover{
 	height: 600px !important;
@@ -720,6 +759,76 @@ h2.aps-post-title a{
 	background-size: cover;
 	background-position: center;
 
+}
+
+.introduction-block{
+	display: block;
+	max-width: 42rem;
+	background: red;
+	text-align: center;
+	margin-left: 12rem;
+	position: absolute;
+	bottom: 10rem;
+}
+.intro-title h1{
+	margin: 0px;
+	font-size: 30px;
+
+}
+.intro-title{
+	max-width: 100%;
+	background: #333333;
+	color: white;
+	padding: 29px 0px 22px 0px;
+}
+.intro-body p{
+	margin: 0px;
+	padding: 20px 18px 20px 18px;
+	font-weight: bold;
+	font-size: 18px;
+}
+.intro-body{
+	max-width: 100%;
+	background: #B3B3B3;
+}
+.service-post{
+	margin-top:0px;
+}
+.content-service{
+	display: flex;
+	JUSTIFY-CONTENT: flex-end;
+	max-width: 100% !important;
+	margin-right: 0px !important;
+}
+
+.content-service-block.main-content {
+	width: 80rem;
+	margin-right: 10rem !important;
+}
+.content-service-block.sidebar-posts h3{
+	font-size: 4rem;
+	margin: 3rem 0;
+}
+li.post-vertical-item a{
+	text-decoration: none;
+	color: #99999B;
+}
+.content-service-block.sidebar-posts li::before {
+	margin-right: 0.3rem;
+	content: url("assets/images/caret-right.png")
+}
+.content-service-block.sidebar-posts ul{
+	margin: 0px;
+	list-style: none;
+}
+.content-service-block.sidebar-posts {
+	width: 50rem;
+	background: #E6E6E6;
+	padding-left: 5rem;
+}
+.content-service-block.main-content h1 {
+	font-size: 6rem;
+	margin: 3rem 0;
 }
 /**END Cbs STYLES**/
 
@@ -1612,7 +1721,7 @@ ul.social-icons li {
 
 .social-icons a {
 	align-items: center;
-	background: #cd2653;
+	background: black !important;
 	border-radius: 50%;
 	color: #fff;
 	display: flex;
@@ -1926,7 +2035,7 @@ ul.primary-menu {
 }
 
 .primary-menu > li {
-	margin: 0.8rem 0 0 1.6rem;
+	margin: 0.8rem 0 0 4.5rem;
 }
 
 .primary-menu > li.menu-item-has-children > a {
@@ -2222,6 +2331,7 @@ button.close-nav-toggle .toggle-text {
 	padding: 2rem 2.5rem;
 	text-decoration: none;
 	width: 100%;
+	color: black!important;
 }
 
 .modal-menu a:focus,
@@ -4739,7 +4849,7 @@ ul.footer-social li {
 	align-items: baseline;
 	display: inline-flex;
 	justify-content: space-between;
-	margin-left: 3rem;
+	margin-left: 5rem;
 }
 
 #site-footer a {
@@ -5763,7 +5873,7 @@ a.to-the-top > * {
 	/* Widgets ------------------------------- */
 
 	.widget .widget-title {
-		margin-bottom: 3rem;
+		margin-bottom: 7rem;
 	}
 
 	/* Site Footer --------------------------- */
@@ -5871,7 +5981,17 @@ a.to-the-top > * {
 	}
 }
 
-@media ( min-width: 1000px ) {
+
+@media ( max-width: 1000px ) {
+	.screen-height {
+		min-height: 48vh;
+	}
+
+	.card {
+		height: 470px;
+	}
+}
+@media ( min-width: 1001px ) {
 
 
 	/***
@@ -6324,9 +6444,15 @@ a.to-the-top > * {
 
 @media ( min-width: 1220px ) {
 
+
+}
+@media ( min-width: 1220px ) {
+
 	/* Element Base -------------------------- */
 
 	/* TITLES */
+
+
 
 	h1,
 	.heading-size-1 {
@@ -6344,7 +6470,8 @@ a.to-the-top > * {
 	}
 
 	.primary-menu > li {
-		margin: 0.8rem 0 0 3rem;
+		font-size: 1.2rem;
+		letter-spacing: 0.2rem;
 	}
 
 	/* HEADER TOGGLES */
@@ -6515,6 +6642,15 @@ a.to-the-top > * {
 
 }
 
+@media ( max-width: 1240px ) {
+
+	/**START Cbs STYLES**/
+	.header-titles-wrapper {
+		margin-right: 0rem;
+	}
+	/**END Cbs STYLES**/
+}
+
 @media ( min-width: 1240px ) {
 
 
@@ -6536,7 +6672,11 @@ a.to-the-top > * {
 
 @media ( min-width: 1280px ) {
 
+
+
+
 	/* Blocks -------------------------------- */
+
 
 	/* BLOCK: GALLERY */
 
@@ -6638,8 +6778,19 @@ a.to-the-top > * {
 	}
 
 }
+.mak{
+	color:red;
+}
 
 @media ( min-width: 1330px ) {
+
+	/**START Cbs STYLES**/
+
+	.header-titles-wrapper {
+		margin-right: 10rem;
+	}
+
+	/**END Cbs STYLES**/
 
 
 	/* Entry Content ------------------------- */
@@ -6678,3 +6829,4 @@ a.to-the-top > * {
 		top: 0;
 	}
 }
+

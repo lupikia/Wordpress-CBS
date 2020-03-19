@@ -18,7 +18,7 @@ $has_sidebar_2 = is_active_sidebar( 'sidebar-2' );
 if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) {
 	?>
 
-	<div class="footer-nav-widgets-wrapper header-footer-group grey-background">
+	<div class="footer-nav-widgets-wrapper header-footer-group grey-background" id="contact-us">
 
 		<div class="footer-inner section-inner">
 

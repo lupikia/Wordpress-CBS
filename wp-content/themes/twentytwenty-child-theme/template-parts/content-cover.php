@@ -49,7 +49,7 @@
 			<div class="slide-cover">
 				<img src="/wp-content/uploads/2020/03/slid-cover.png">
 			</div>
-			<?php echo do_shortcode('[slick-slider image_size="large" speed="5000" autoplay_interval="5000"]'); ?>
+			<?php echo do_shortcode('[slick-slider image_size="large" dots="false" speed="5000" autoplay_interval="5000"]'); ?>
 			<div class="cover-header-inner">
 				<div class="cover-color-overlay color-accent<?php echo esc_attr( $color_overlay_classes ); ?>"<?php echo $color_overlay_style; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) ?>></div>
 				
