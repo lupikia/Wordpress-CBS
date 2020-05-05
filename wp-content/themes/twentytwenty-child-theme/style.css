@@ -458,13 +458,14 @@ hr {
 
 	margin-right: 10px !important;
 }
+.partner-images .blocks-gallery-grid{
+	width:80% ;
+}
 .partner-images  {
 	margin: auto 0px;
 	justify-content: center;
 }
-#about-us p{
-	line-height: 1.5;
-}
+
 #about-us{
 	padding: 9rem 0;
 }
@@ -503,14 +504,23 @@ hr {
 	margin-top: 2rem !important;
 }
 .card {
-	display: inline-block;
+	/*display: inline-block;*/
+	/*text-align: center;*/
+	/*float: left;*/
+	/*max-width: 40rem !important;*/
+	/*margin-right: 5rem !important;*/
+	/*height: 375px;*/
+	/*position: relative;*/
+	/*margin-bottom: 5rem !important;*/
+
 	text-align: center;
-	float: left;
 	max-width: 40rem !important;
-	margin-right: 5rem !important;
 	height: 375px;
 	position: relative;
 	margin-bottom: 5rem !important;
+}
+.services-content>.wp-block-group__inner-container .wp-block-columns:last-child .card:last-child{
+	height: 275px;
 }
 
 .card-image{
@@ -543,23 +553,8 @@ hr {
 	font-size: 15px;
 	line-height: 1.5;
 }
-.contact-logo{
-	margin-bottom: 13rem!important;
-}
-.contact-logo{
 
-	width: 45rem;
-	margin: auto;
-}
-.contact-social ul {
-	width: 40rem;
-	margin: auto;
-}
-.contact-social li{
-	display: inline-block;
-	width: 9rem;
-	text-align: center;
-}
+
 .contact-details li .icon-size-l {
 	margin-right: 15px;
 }
@@ -583,9 +578,7 @@ hr {
 	text-align: left;
 
 }
-#contact-us .footer-widgets.column-two .widget_text{
-	margin-left: 7rem;
-}
+
 #contact-us .footer-inner{
 	max-width: 100%;
 }
@@ -640,81 +633,13 @@ hr {
 	text-align: left;
 }
 
-.case-item{
-	text-decoration: none;
-	max-width: 50rem !important;
-	display: inline-block;
-	margin-left: 10rem !important;
-}
+
 .case-study .wp-block-group__inner-container{
 	max-width: 170rem !important;
 }
 
-.case{
-	height: 270px;
-	position: relative;
-	color: black;
-	margin-bottom: 50px;
-}
-.case-info{
-	color: white;
-	display: inline-block;
-	width: 200px;
-	margin-left: 16px;
-	float: left;
-	text-align: left;
-}
-.case-info> *{
-	margin: 0px !important;
-}
-.case img{
-	float: left;
-	width: auto;
-	display: inline-block;
-	margin-left: 30px;
-	border-radius: 10px;
-	height: 80px;
-	width: 120px;
-}
-.case-paragraph{
-	width: 100%;
-	max-width: 100%;
-	height: 140px;
-	background: white;
-	border-radius: 20px;
-	margin-bottom: 37px;
-	position: relative;
-	text-align: left;
-	padding: 10px 20px;
-	font-size: 14px;
-	line-height: 1.5;
-}
 
-.case-title,.case-supporting-text{
-	font-size: 14px;
-}
-.case-supporting-text{
-	color:#A1A1A1;
-}
-.case-pointer {
-	width: 0;
-	height: 0;
-	border-left: 27px solid transparent;
-	border-right: 27px solid transparent;
-	border-top: 27px solid white;
-	position: absolute;
-	bottom: -19px;
-	left: 55px;
-}
 
-.footer-widgets.column-one.grid-item{
-	border-right: solid;
-}
-
-.entry-header-inner>.entry-title{
-	font-size: 5.5rem !important;
-	line-height: 4 !important;
-}
 
 .aps-themeb .read-more,.aps-entry-date,.aps-meta-info {
 	display: none !important;
@@ -747,9 +672,7 @@ h2.aps-post-title a{
 
 }
 
-.service .screen-height {
-	min-height: 63vh !important;
-}
+
 .service .cover-header + .post-inner{
 	padding:0px ;
 }
@@ -761,36 +684,7 @@ h2.aps-post-title a{
 
 }
 
-.introduction-block{
-	display: block;
-	max-width: 42rem;
-	background: red;
-	text-align: center;
-	margin-left: 12rem;
-	position: absolute;
-	bottom: 10rem;
-}
-.intro-title h1{
-	margin: 0px;
-	font-size: 30px;
 
-}
-.intro-title{
-	max-width: 100%;
-	background: #333333;
-	color: white;
-	padding: 29px 0px 22px 0px;
-}
-.intro-body p{
-	margin: 0px;
-	padding: 20px 18px 20px 18px;
-	font-weight: bold;
-	font-size: 18px;
-}
-.intro-body{
-	max-width: 100%;
-	background: #B3B3B3;
-}
 .service-post{
 	margin-top:0px;
 }
@@ -1378,17 +1272,211 @@ th {
 }
 
 .screen-height {
-	min-height: 100vh;
+	/* min-height: 100vh; */
 }
 
 .admin-bar .screen-height {
 	min-height: calc(100vh - 32px);
 }
 
-@media (max-width: 782px) {
+/*-Start--------------------------------------------CBS Solution-------------------------------*/
+
+.case{
+	height: 270px;
+	position: relative;
+	color: black;
+	margin-bottom: 50px;
+}
+.case-info{
+	color: white;
+	display: inline-block;
+	width: 200px;
+	margin-left: 35px;
+	float: left;
+	text-align: left;
+}
+.case-info> *{
+	margin: 0px !important;
+}
+.case img{
+	float: left;
+	width: auto;
+	display: inline-block;
+	margin-left: 30px;
+	border-radius: 10px;
+	height: 80px;
+	width: 120px;
+}
+
+
+.case-title,.case-supporting-text{
+	font-size: 14px;
+}
+.case-supporting-text{
+	color:#A1A1A1;
+}
+.case-pointer {
+	width: 0;
+	height: 0;
+	border-left: 27px solid transparent;
+	border-right: 27px solid transparent;
+	border-top: 27px solid white;
+	position: absolute;
+	bottom: -19px;
+	left: 55px;
+}
+
+
+.entry-header-inner>.entry-title {
+	font-size: 2.5rem;
+	line-height: 1.2;
+}
+#about-us {
+	padding: 5rem 0;
+}
+.card {
+	height: auto;
+}
+.card-action {
+	bottom: auto;
+	margin-bottom: 10rem;
+}
+#about-us p{
+	line-height: 1.5;
+	padding: 0px 10%
+}
+.screen-height {
+	/* min-height: 50vh; */
+}
+
+.card {
+	height: auto;
+	margin: auto;
+}
+.case .case-paragraph p{
+	overflow-y: auto;
+	height: 90%;
+}
+.case-paragraph{
+	width: 100%;
+	max-width: 100%;
+	height: 140px;
+	background: white;
+	border-radius: 20px;
+	margin-bottom: 37px;
+	position: relative;
+	text-align: left;
+	padding: 10px 20px;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.case-item{
+	text-decoration: none;
+	max-width: 50rem !important;
+	display: inline-flex;
+	padding: 0px 20px;
+}
+.contact-social ul{
+	margin: 0px;
+	padding: 0px;
+}
+.footer-widgets.column-one.grid-item{
+	border-bottom: solid;
+}
+.contact-social li{
+	display: inline-block;
+	width: 7rem;
+	text-align: center;
+}
+#site-footer .section-inner {
+	align-items: baseline;
+	display: inline-flex;
+	justify-content: space-between;
+	margin-left: 2rem;
+}
+
+.introduction-block{
+	display: block;
+	max-width: 42rem;
+	background: red;
+	text-align: center;
+	margin-left: 5rem;
+	position: absolute;
+	bottom: 20rem;
+}
+.intro-title h1{
+	margin: 0px;
+	font-size: 7vw;
+}
+.intro-title{
+	max-width: 100%;
+	background: #333333;
+	color: white;
+	padding: 29px 0px 22px 0px;
+}
+.intro-body p{
+	margin: 0px;
+	padding: 20px 18px 20px 18px;
+	font-weight: bold;
+	font-size: 18px;
+}
+.intro-body{
+	max-width: 100%;
+	background: #B3B3B3;
+}
+.service .screen-height {
+	min-height: 70vh !important;
+}
+
+body.template-cover .entry-header {
+	background: transparent;
+	padding: 0;
+	margin-top: 30vw;
+}
+/*-END--------------------------------------------CBS Solution-------------------------------*/
+
+@media ( min-width: 598px ) {
+
+	/*START----------------------------cbs solution-----------------------------*/
+	body.template-cover .entry-header {
+		margin-top: 25vw;
+	}
+	/*END----------------------------cbs solution-----------------------------*/
+}
+
+@media (min-width: 782px) {
+	#site-footer .section-inner {
+		align-items: baseline;
+		display: inline-flex;
+		justify-content: space-between;
+		margin-left: 5rem;
+	}
+	.contact-logo{
+		margin-bottom: 5rem!important;
+	}
+	#contact-us .footer-widgets.column-two .widget_text{
+		margin-left: 7rem;
+	}
+	.footer-widgets.column-one.grid-item{
+		border-right: solid;
+	}
+
+	.entry-header-inner>.entry-title{
+		font-size: 5.5rem !important;
+	}
+	body.template-cover .entry-header {
+		margin-top: 15vw;
+	}
 
 	.admin-bar .screen-height {
 		min-height: calc(100vh - 46px);
+	}
+	.admin-bar .search-modal.active {
+		top: 46px;
+	}
+	#about-us p {
+		padding: 0px 10%;
 	}
 }
 
@@ -2509,9 +2597,7 @@ button.sub-menu-toggle.active svg {
 
 @media (max-width: 782px) {
 
-	.admin-bar .search-modal.active {
-		top: 46px;
-	}
+
 }
 
 .search-modal-inner {
@@ -2663,10 +2749,7 @@ button.search-untoggle {
 	color: #fff;
 }
 
-body.template-cover .entry-header {
-	background: transparent;
-	padding: 0;
-}
+
 
 .cover-header h1,
 .cover-header h2,
@@ -4845,12 +4928,7 @@ ul.footer-social li {
 	color:white;
 }
 
-#site-footer .section-inner {
-	align-items: baseline;
-	display: inline-flex;
-	justify-content: space-between;
-	margin-left: 5rem;
-}
+
 
 #site-footer a {
 	text-decoration: none;
@@ -4895,7 +4973,9 @@ a.to-the-top > * {
 /*	17. Media Queries
 /* -------------------------------------------------------------------------- */
 
+
 @media ( max-width: 479px ) {
+
 
 	/* Blocks -------------------------------- */
 
@@ -4988,6 +5068,26 @@ a.to-the-top > * {
 	.wp-block-columns.alignfull + .wp-block-columns.alignfull {
 		margin-top: -4rem;
 	}
+	#partners .blocks-gallery-item {
+		width: calc((100% - 112px) / 4);
+	}
+	/*START----------------------------cbs solution-----------------------------*/
+	.intro-title h1 {
+		font-size: 5vw;
+	}
+	.introduction-block {
+		bottom: 10vh;
+	}
+	.card {
+		height: 555px;
+	}
+	.card-action {
+		bottom: 0px;
+	}
+	.services-content>.wp-block-group__inner-container .wp-block-columns:last-child .card:last-child {
+		height: 400px;
+	}
+	/*END----------------------------cbs solution-----------------------------*/
 
 }
 
@@ -5963,6 +6063,17 @@ a.to-the-top > * {
 		display: none;
 	}
 
+	/*START----------------------------cbs solution-----------------------------*/
+	.contact-social li {
+		width: 8vw;
+	}
+	.footer-widgets.column-one.grid-item {
+		border-bottom: none;
+	}
+	/*END----------------------------cbs solution-----------------------------*/
+
+
+
 }
 
 @media (min-width: 782px) {
@@ -5979,18 +6090,26 @@ a.to-the-top > * {
 	.wp-block-columns.alignfull + .wp-block-columns.alignfull {
 		margin-top: -2.8rem;
 	}
+
 }
 
+@media ( min-width: 1000px ) {
 
-@media ( max-width: 1000px ) {
-	.screen-height {
-		min-height: 48vh;
+	/*START----------------------------cbs solution-----------------------------*/
+	.intro-title h1 {
+		font-size: 3vw;
 	}
+	.case-item {
+		max-width: 45rem !important;
+		display: inline-flex;
+	}
+	#partners .blocks-gallery-item {
+		width: calc((100% - 112px) / 8);
+	}
+	/*END----------------------------cbs solution-----------------------------*/
 
-	.card {
-		height: 470px;
-	}
 }
+
 @media ( min-width: 1001px ) {
 
 
@@ -6673,7 +6792,11 @@ a.to-the-top > * {
 @media ( min-width: 1280px ) {
 
 
-
+	/*START----------------------------cbs solution-----------------------------*/
+	body.template-cover .entry-header {
+		margin-top: 33vw;
+	}
+	/*END----------------------------cbs solution-----------------------------*/
 
 	/* Blocks -------------------------------- */
 
@@ -6783,6 +6906,18 @@ a.to-the-top > * {
 }
 
 @media ( min-width: 1330px ) {
+
+	/*START----------------------------cbs solution-----------------------------*/
+	.card {
+		height: 500px;
+	}
+	.case-item {
+		max-width: 60rem !important;
+	}
+	.case{
+		margin:auto;
+	}
+	/*END----------------------------cbs solution-----------------------------*/
 
 	/**START Cbs STYLES**/
 
