@@ -17,6 +17,7 @@
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<link rel="stylesheet" href="http://www.cbs.localhost.com:8012/wp-content/themes/twentytwenty-child-theme/owl.carousel.min.css" />
 
 		<link rel="profile-lele" href="https://gmpg.org/xfn/11">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

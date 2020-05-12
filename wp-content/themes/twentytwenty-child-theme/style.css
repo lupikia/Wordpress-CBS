@@ -644,16 +644,20 @@ hr {
 .aps-themeb .read-more,.aps-entry-date,.aps-meta-info {
 	display: none !important;
 }
+.aps-themeb {
+	height: 300px;
+}
+
 .aps-themeb p {
 	font-size: 14px;
 	margin: 0px 15px 0 !important;
 }
-[class^="outer_wrap-"]{max-width: 100rem !important;width: 100rem !important;height: 380px !important;}
+/*[class^="outer_wrap-"]{max-width: 100rem !important;width: 100rem !important;height: 380px !important;}*/
 [class^="aps-next-"]{
-	right: -6.8%!important;
+	right: -15.8%!important;
 }
 [class^="aps-prev-"]{
-	left: -6.8%!important;
+	left: -15.8%!important;
 }
 [class^="aps-next-"],[class^="aps-prev-"]{
 
@@ -666,7 +670,7 @@ h2.aps-post-title a{
 	display: block!important;
 	width: 100%!important;
 	text-align: center!important;
-	font-size: 24px!important;
+	font-size: 20px!important;
 	font-weight: 600!important;
 	color: black;
 
@@ -677,7 +681,7 @@ h2.aps-post-title a{
 	padding:0px ;
 }
 .service .slide-cover{
-	height: 600px !important;
+	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -1397,13 +1401,16 @@ th {
 }
 
 .introduction-block{
-	display: block;
+	/* display: flex; */
 	max-width: 42rem;
-	background: red;
+	/* background: red; */
 	text-align: center;
 	margin-left: 5rem;
-	position: absolute;
-	bottom: 20rem;
+	position: relative;
+	/* bottom: 20rem; */
+	height: auto;
+	margin-top: 170px;
+	margin-bottom: 40px;
 }
 .intro-title h1{
 	margin: 0px;
@@ -1425,8 +1432,8 @@ th {
 	max-width: 100%;
 	background: #B3B3B3;
 }
-.service .screen-height {
-	min-height: 70vh !important;
+.service .slider-cover {
+	position: relative;
 }
 
 body.template-cover .entry-header {
@@ -1435,6 +1442,34 @@ body.template-cover .entry-header {
 	margin-top: 30vw;
 }
 /*-END--------------------------------------------CBS Solution-------------------------------*/
+@media screen and (orientation: landscape) and (min-device-width: 400px){
+
+	.intro-title {
+		padding: 14px 0px 14px 0px;
+	}
+	.intro-title h1 {
+		margin: 0px;
+		font-size: 5vw;
+	}
+	.introduction-block {
+		max-width: 45rem;
+	}
+
+}
+@media screen and (orientation: landscape) and (min-device-width: 598px){
+
+
+	.introduction-block {
+		max-width: 45rem;
+	}
+
+}
+@media screen and (orientation: landscape) and (min-device-width: 1024px){
+
+
+}
+
+
 
 @media ( min-width: 598px ) {
 
@@ -2747,6 +2782,7 @@ button.search-untoggle {
 
 .cover-header .entry-header * {
 	color: #fff;
+	text-shadow: 4px 2px 13px black;
 }
 
 
@@ -4056,7 +4092,7 @@ figure.wp-block-table.is-style-stripes {
 }
 
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	max-width: 58rem;
+	max-width: 25rem;
 	width: 100%;
 }
 
@@ -5000,6 +5036,13 @@ a.to-the-top > * {
 
 @media ( min-width: 480px ) {
 
+	.aps-themeb {
+		height: 370px;
+	}
+	[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+		max-width: 35rem;
+		width: 100%;
+	}
 	/* Blocks -------------------------------- */
 
 	/* BLOCK: BASE ALIGNMENT WIDTH */
@@ -5073,10 +5116,7 @@ a.to-the-top > * {
 	}
 	/*START----------------------------cbs solution-----------------------------*/
 	.intro-title h1 {
-		font-size: 5vw;
-	}
-	.introduction-block {
-		bottom: 10vh;
+		font-size: 35px;
 	}
 	.card {
 		height: 555px;
@@ -5086,6 +5126,13 @@ a.to-the-top > * {
 	}
 	.services-content>.wp-block-group__inner-container .wp-block-columns:last-child .card:last-child {
 		height: 400px;
+	}
+	[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+		max-width: 45rem;
+		width: 100%;
+	}
+	.aps-themeb {
+		height: 315px;
 	}
 	/*END----------------------------cbs solution-----------------------------*/
 
@@ -5158,6 +5205,18 @@ a.to-the-top > * {
 }
 
 @media ( min-width: 700px ) {
+
+
+	/*START----------------------------cbs solution-----------------------------*/
+	.aps-themeb {
+		height: 320px;
+	}
+	[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+		max-width: 50rem;
+		width: 100%;
+	}
+	/*END----------------------------cbs solution-----------------------------*/
+
 
 	/* Element Base ------------------------- */
 
@@ -6096,8 +6155,10 @@ a.to-the-top > * {
 @media ( min-width: 1000px ) {
 
 	/*START----------------------------cbs solution-----------------------------*/
-	.intro-title h1 {
-		font-size: 3vw;
+
+	[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+		max-width: 85rem;
+		width: 100%;
 	}
 	.case-item {
 		max-width: 45rem !important;
@@ -6105,6 +6166,15 @@ a.to-the-top > * {
 	}
 	#partners .blocks-gallery-item {
 		width: calc((100% - 112px) / 8);
+	}
+	.aps-themeb {
+		height: 400px;
+	}
+	[class^="aps-prev-"] {
+		left: -6.8%!important;
+	}
+	[class^="aps-next-"] {
+		right: -6.8%!important;
 	}
 	/*END----------------------------cbs solution-----------------------------*/
 
@@ -6771,6 +6841,13 @@ a.to-the-top > * {
 }
 
 @media ( min-width: 1240px ) {
+	/*START----------------------------cbs solution-----------------------------*/
+
+	[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+		max-width: 110rem;
+		width: 100%;
+	}
+	/*END----------------------------cbs solution-----------------------------*/
 
 
 	/* Blocks -------------------------------- */
@@ -6917,6 +6994,15 @@ a.to-the-top > * {
 	.case{
 		margin:auto;
 	}
+	.intro-title h1 {
+		font-size: 35px;
+	}
+	.introduction-block {
+		margin-top: 290px;
+	}
+	.aps-themeb {
+		height: 341px;
+	}
 	/*END----------------------------cbs solution-----------------------------*/
 
 	/**START Cbs STYLES**/
@@ -6926,7 +7012,6 @@ a.to-the-top > * {
 	}
 
 	/**END Cbs STYLES**/
-
 
 	/* Entry Content ------------------------- */
 
